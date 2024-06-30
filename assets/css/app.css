@@ -1,0 +1,493 @@
+body {
+  background-color: #6c757d;
+}
+body img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5px 20px;
+  margin: 0;
+}
+.navigation a {
+  text-decoration: none;
+}
+.navigation ul {
+  list-style: none;
+}
+.navigation .nav-link {
+  color: white;
+}
+.navigation .navbar-logo {
+  justify-self: start;
+  display: flex;
+  align-items: center;
+}
+.navigation .navbar-logo .search-form {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.navigation .navbar-menu {
+  justify-self: center;
+  position: relative;
+  width: 20rem;
+  display: flex;
+  justify-content: space-around;
+}
+.navigation .auth {
+  display: flex;
+  flex-direction: row;
+}
+.navigation .auth .nav-item {
+  margin-left: 10px;
+}
+.navigation .profile {
+  justify-self: end;
+  align-self: center;
+  list-style: none;
+}
+.navigation .profile .card-avatar {
+  border-radius: 50%;
+  border: #6c757d 2px;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+.navigation .profile .menu {
+  position: relative;
+}
+.navigation .profile .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: -50%;
+  transform: translateX(-50%);
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+.navigation .profile .dropdown-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 130px;
+}
+.navigation .profile .dropdown-body a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+.navigation .profile .dropdown-body a span {
+  margin-left: 10px;
+}
+.navigation .profile .dropdown-body a:hover {
+  background-color: #f0f0f0;
+}
+.navigation .profile .dropdown-body hr {
+  border: 0;
+  height: 1px;
+  background-color: #333;
+  margin: 0;
+}
+
+.profile-page {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.profile-page .card-text {
+  color: #6c757d;
+  font-size: small;
+}
+.profile-page .card-text strong {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.profile-page .profile {
+  width: 20rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.profile-page .profile .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profile-page .profile .profile-username {
+  display: flex;
+  flex-direction: column;
+}
+.profile-page .profile .profile-username a {
+  text-decoration: none;
+}
+.profile-page .profile .profile-username a .card-title {
+  margin-bottom: 0;
+}
+.profile-page .profile-info,
+.profile-page .profile-bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-width: 20rem;
+}
+.profile-page .profile-info .card-text,
+.profile-page .profile-bio .card-text {
+  color: #6c757d;
+  font-size: small;
+}
+.profile-page .profile-info .card-text strong,
+.profile-page .profile-bio .card-text strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.tag .card {
+  margin-bottom: 50px;
+}
+.tag .card .card-body {
+  padding: 0;
+}
+.tag .card .card-body .tag-image {
+  width: 100%;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.tag .card .card-body .tag-image:hover {
+  opacity: 1;
+}
+.tag .card .card-body .tag-title {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.card {
+  border: none;
+  margin-bottom: 20px;
+}
+.card .card-img-top {
+  aspect-ratio: 1/1;
+}
+.card .card-body {
+  text-align: left;
+  padding: 5px;
+}
+.card .card-body .card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.card .card-body .card-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.card .card-body .card-profile a {
+  text-decoration: none;
+}
+.card .card-body .card-profile a .card-user {
+  margin: 0;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  color: #6c757d;
+}
+.card .card-body .card-profile .card-avatar {
+  border-radius: 50%;
+  border: 2px solid #6c757d;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.profile-settings {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.profile-settings .profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile-settings .avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.following {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+.following .card-profile {
+  display: flex;
+  gap: 2rem;
+}
+.following .card-profile .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.following .card-profile .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.following .card-profile .card-info .btn {
+  width: 8rem;
+}
+.following .card-profile .card-info a {
+  text-decoration: none;
+}
+.following .card-profile .card-info a .card-user {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.following .card-profile .card-info .card-text {
+  color: #6c757d;
+  font-size: small;
+}
+.following .card-profile .card-info form {
+  display: flex;
+  flex-direction: column;
+}
+.following .posts {
+  display: flex;
+  flex-direction: row;
+}
+.following .posts .post {
+  flex: 0 0 auto;
+}
+.following .posts .post .post-image {
+  width: 100%;
+  max-width: 14rem;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+}
+.following .posts .no-posts {
+  color: #6c757d;
+  font-size: small;
+  text-align: center;
+  width: 100%;
+}
+
+.post-detail .post {
+  background-color: white;
+}
+.post-detail .post .post-comments .user-info {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.post-detail .post .post-comments .user-info .card-avatar {
+  width: 50px;
+  height: 50px;
+}
+.post-detail .post .post-comments .user-info textarea {
+  resize: none;
+}
+.post-detail .post .post-comments .comment .comment-avatar {
+  width: 40px;
+  height: 40px;
+}
+.post-detail .post .post-comments .comment .comment-text {
+  margin-top: 0.5rem;
+}
+.post-detail .post .post-image {
+  width: 50rem;
+  height: auto;
+  border-radius: 5px;
+}
+.post-detail .post .post-info {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.post-detail .post .post-info .post-bt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.post-detail .post .post-info .post-bt .likes-container {
+  margin-right: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.post-detail .post .post-info .post-bt .likes-container p.post-likes-count {
+  padding: 0;
+  margin: 0;
+}
+.post-detail .post .post-info .post-bt .post-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.post-detail .post .post-info .post-tag {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #6c757d;
+}
+.post-detail .post .post-info .post-date {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+.post-detail .post .post-comments {
+  margin-top: 2rem;
+}
+.post-detail .post .post-comments h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.post-detail .user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.post-detail .user-info .card-profile {
+  display: flex;
+  gap: 1rem;
+}
+.post-detail .user-info .card-profile .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.post-detail .user-info .card-profile a {
+  text-decoration: none;
+}
+.post-detail .user-info .card-profile a .card-user {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333;
+}
+.post-detail .user-info .posts {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.post-detail .user-info .posts .post-image {
+  width: 6rem;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+}
+
+.search .btn-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.search .btn-group .btn.active {
+  border-bottom: 2px solid #333;
+}
+.search .btn-group .btn {
+  margin: 0 5px;
+}
+.search .search-section.d-none {
+  display: none;
+}
+.search .search-section .card .card-img-container {
+  height: 200px;
+  overflow: hidden;
+}
+.search .search-section .card .card-img-container img {
+  width: 100%;
+  height: auto;
+}
+.search .search-section .card .card-body .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.search .search-section .card .card-body .card-profile {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.search .search-section .card .card-body .card-profile .card-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.search .search-section .card .card-body .card-profile .card-user {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.search .following {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+.search .following .card-profile {
+  display: flex;
+  gap: 2rem;
+}
+.search .following .card-profile .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.search .following .card-profile .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.search .following .card-profile .card-info .btn {
+  width: 8rem;
+}
+.search .following .card-profile .card-info a {
+  text-decoration: none;
+}
+.search .following .card-profile .card-info a .card-user {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.search .following .card-profile .card-info .card-text {
+  color: #6c757d;
+  font-size: small;
+}
+.search .following .card-profile .card-info form {
+  display: flex;
+  flex-direction: column;
+}
+.search .following .posts {
+  display: flex;
+  flex-direction: row;
+}
+.search .following .posts .post {
+  flex: 0 0 auto;
+}
+.search .following .posts .post .post-image {
+  width: 100%;
+  max-width: 14rem;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+}
+.search .following .posts .no-posts {
+  color: #6c757d;
+  font-size: small;
+  text-align: center;
+  width: 100%;
+}/*# sourceMappingURL=app.css.map */

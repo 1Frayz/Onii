@@ -1,0 +1,620 @@
+body {
+    background-color: #6c757d;
+
+    img {
+        object-fit: cover;
+    }
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px 20px;
+    margin: 0;
+
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .nav-link {
+        color: white;
+    }
+
+    .navbar-logo {
+        justify-self: start;
+        display: flex;
+        align-items: center;
+
+        .search-form {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+    }
+
+    .navbar-menu {
+        justify-self: center;
+        position: relative;
+        width: 20rem;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .auth {
+        display: flex;
+        flex-direction: row;
+
+        .nav-item {
+            margin-left: 10px;
+        }
+    }
+
+    .profile {
+        justify-self: end;
+        align-self: center;
+        list-style: none;
+
+        .card-avatar {
+
+            border-radius: 50%;
+            border: #6c757d 2px;
+            width: 2.5rem;
+            height: 2.5rem;
+            cursor: pointer;
+        }
+
+
+        .menu {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 110%;
+            left: -50%;
+            transform: translateX(-50%);
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .dropdown-body {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            width: 130px;
+        }
+
+        .dropdown-body a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-body a span {
+            margin-left: 10px;
+        }
+
+        .dropdown-body a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .dropdown-body hr {
+            border: 0;
+            height: 1px;
+            background-color: #333;
+            margin: 0;
+        }
+    }
+}
+
+
+
+.profile-page {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-wrap: wrap;
+
+    .card-text {
+        color: #6c757d;
+        font-size: small;
+
+        strong {
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .profile {
+        width: 20rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-username {
+            display: flex;
+            flex-direction: column;
+
+
+            a {
+                text-decoration: none;
+
+                .card-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .profile-info,
+    .profile-bio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.5rem;
+        min-width: 20rem;
+
+        .card-text {
+            color: #6c757d;
+            font-size: small;
+
+            strong {
+                display: block;
+                margin-bottom: .5rem;
+            }
+        }
+    }
+}
+
+.tag {
+    .card {
+        margin-bottom: 50px;
+
+        .card-body {
+            padding: 0;
+
+            .tag-image {
+                width: 100%;
+                opacity: 0.7;
+                transition: opacity 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            .tag-title {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 0.5rem;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.card {
+    border: none;
+    margin-bottom: 20px;
+
+    .card-img-top {
+        aspect-ratio: 1 / 1;
+    }
+
+    .card-body {
+        text-align: left;
+        padding: 5px;
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .card-profile {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+
+            a {
+                text-decoration: none;
+
+                .card-user {
+                    margin: 0;
+                    font-size: 1rem;
+                    margin-left: 0.5rem;
+                    color: #6c757d;
+                }
+            }
+
+            .card-avatar {
+                border-radius: 50%;
+                border: 2px solid #6c757d;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}
+
+
+.profile-settings {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    .profile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .avatar {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+
+    }
+}
+
+
+.following {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    .card-profile {
+        display: flex;
+
+        gap: 2rem;
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .btn {
+                width: 8rem;
+            }
+
+            a {
+                text-decoration: none;
+
+                .card-user {
+                    margin: 0;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .card-text {
+                color: #6c757d;
+                font-size: small;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .posts {
+        display: flex;
+        flex-direction: row;
+
+        .post {
+            flex: 0 0 auto;
+
+            .post-image {
+                width: 100%;
+                max-width: 14rem;
+                aspect-ratio: 1 / 1;
+                border-radius: 5px;
+            }
+        }
+
+        .no-posts {
+            color: #6c757d;
+            font-size: small;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+}
+
+
+
+.post-detail {
+    .post {
+        background-color: white;
+
+        .post-comments {
+            .user-info {
+                display: flex;
+                flex-direction: row;
+                gap: 0;
+
+                .card-avatar {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                textarea {
+                    resize: none;
+                }
+            }
+
+            .comment {
+                .comment-avatar {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .comment-text {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+
+
+
+        .post-image {
+            width: 50rem;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .post-info {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+
+            .post-bt {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .likes-container {
+                    margin-right: 0.5rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    p.post-likes-count {
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+
+                .post-title {
+                    font-size: 1.75rem;
+                    font-weight: 700;
+                }
+            }
+
+
+            .post-tag {
+                text-decoration: none;
+                font-size: 1rem;
+                color: #6c757d;
+            }
+
+
+            .post-date {
+                font-size: 0.875rem;
+                color: #6c757d;
+            }
+        }
+
+        .post-comments {
+            margin-top: 2rem;
+
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .card-profile {
+            display: flex;
+            gap: 1rem;
+
+            .avatar {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+            }
+
+            a {
+                text-decoration: none;
+
+                .card-user {
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    color: #333;
+                }
+            }
+
+        }
+
+        .posts {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+
+            .post-image {
+                width: 6rem;
+                aspect-ratio: 1 / 1;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.search {
+    .btn-group {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        .btn.active {
+            border-bottom: 2px solid #333;
+        }
+
+        .btn {
+            margin: 0 5px;
+        }
+    }
+
+    .search-section {
+        &.d-none {
+            display: none;
+        }
+
+        .card {
+            .card-img-container {
+                height: 200px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .card-body {
+                .card-title {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+
+                .card-profile {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 10px;
+
+                    .card-avatar {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+
+                    .card-user {
+                        font-size: 1rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .following {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+
+        .card-profile {
+            display: flex;
+
+            gap: 2rem;
+
+            .avatar {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .card-info {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                .btn {
+                    width: 8rem;
+                }
+
+                a {
+                    text-decoration: none;
+
+                    .card-user {
+                        margin: 0;
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .card-text {
+                    color: #6c757d;
+                    font-size: small;
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        .posts {
+            display: flex;
+            flex-direction: row;
+
+            .post {
+                flex: 0 0 auto;
+
+                .post-image {
+                    width: 100%;
+                    max-width: 14rem;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 5px;
+                }
+            }
+
+            .no-posts {
+                color: #6c757d;
+                font-size: small;
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+    }
+}
